@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="eng" ng-app>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Resume &middot;</title>
+
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen,print">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="cv.js"></script>
+	<style type="text/css">
+		body {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		.html5-progress-bar {
+	padding: 15px 15px;
+	border-radius: 3px;
+	background-color: #fff;
+	box-shadow:  0px 1px 2px 0px rgba(0, 0, 0, .2);
+}
+.html5-progress-bar progress {
+	background-color: #f3f3f3;
+	border: 0;
+	width: 80%;
+	height: 18px;
+	border-radius: 9px;
+}
+.html5-progress-bar progress::-webkit-progress-bar {
+	background-color: #f3f3f3;
+	border-radius: 9px;
+}
+.html5-progress-bar progress::-webkit-progress-value {
+	background: #cdeb8e;
+	background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+	background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+	background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+	background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+	background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+	border-radius: 9px;
+}
+.html5-progress-bar progress::-moz-progress-bar {
+	background: #cdeb8e;
+	background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+	background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+	background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+	background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
+	background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+	border-radius: 9px;
+}
+.html5-progress-bar .progress-value {
+	padding: 0px 5px;
+	line-height: 20px;
+	margin-left: 5px;
+	font-size: .8em;
+	color: #555;
+	height: 18px;
+	float: right;
+}
+
+
+    </style>
+</head>
+<body>
+
+	<div class="container" ng-controller="CVCtrl">
+
+		<div class="page-header">
+			<div class="row">
+				<div class="span6">
+					<small>Professional Resume</small>	
+					<h2 style="margin-top : 0px; margin-bottom: 0px;">{{cv.name}}</h2>
+					<h2 style="margin-top : 0px; margin-bottom: 0px;"><small style="font-size: 28px">{{ cv.title }}</small></h2>
+				</div>
+
+				<div class="span2">
+					<br><br>
+					<div>
+						<small>	
+							<span>b.</span>
+							<span>{{ cv.personal.born }}</span>
+						</small>
+					</div>
+					<div>
+						<small>
+							<span>n.</span>
+							<span>{{ cv.personal.country }}</span>
+						</small>
+					</div>
+					<div>
+						<small>
+							<span>m.s.</span>
+							<span>{{ cv.personal.status }}</span>
+						</small>
+					</div>
+				</div>
+
+				<div class="span4">
+					<br><br>
+					<address>
+						<small>
+	  						<span>a.</span> {{ cv.personal.address.street }}, {{ cv.personal.address.CP }}
+	  						{{ cv.personal.address.city}}, {{ cv.personal.address.country }}<br>
+	  						<span>p.</span> {{ cv.personal.contact.tfn }}<br>
+	  						<span>m.</span> {{ cv.personal.contact.email }}
+  						</small>
+					</address>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="span6">
+
+				<h4 style="border-bottom: solid 1px;"><span><i class="icon-pencil"></i> Education</span></h4>
+				<table>
+					<tr>
+						<td colspan="3">
+							<div><strong>{{ cv.education.title }}</strong></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<small>{{  cv.education.time }}</small>
+						</td>
+						<td> </td>
+						<td>
+							<div><small>{{ cv.education.school }}</small></div>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>
+							<div><small>** {{ cv.education.note }}</small></div>
+						</td>
+					</tr>
+				</table>
+
+				<br><br>
+				<h4 style="border-bottom: solid 1px;"><span><i class="icon-folder-open"></i> Professional Profile</span></h4>
+				<small> {{ cv.profile.description }}</small>
+
+				<br><br><br>
+				<h4 style="border-bottom: solid 1px;"><span><i class="icon-list"></i> Qualifications </span></h4>
+				<ul ng-repeat="qualification in cv.profile.qualifications">
+					<li>
+						<div>
+							<small>{{ qualification }} </small>
+						</div>
+					</li>
+				</ul>
+
+				<br>
+				<h4 style="border-bottom: solid 1px;"><span><i class="icon-signal"></i> Skills </span></h4>
+				<br>
+				<table ng-repeat="skill in cv.skills" style="margin:10px">
+					<tr>
+						<td style="width:80px">{{ skill.label }}</td>
+						<td>
+							<progress max="100" value="{{ skill.value }}" style="width:300px">
+  								<strong></strong>
+							</progress>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+
+			<div class="span6">
+
+				<h4 style="border-bottom: solid 1px;"><span><i class="icon-road"></i> Experience</span> <small>( Relevant projects )</small></h4>
+				<ul ng-repeat="exp in cv.experience" style="list-style-type:none; margin : 0 0 10px 0px">
+					<li>
+						<table>
+							<tr>
+								<td style="vertical-align : top; width : 70px">
+									<small>{{ exp.from }} - {{ exp.to }}</small>
+								</td>
+								<td style="vertical-align : top"> &middot;</td>
+								<td style="vertical-align : top">
+									<div><strong> {{ exp.company }}</strong></div>
+									<div><p class="text-info">{{ exp.rol }}</p></div>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li ng-repeat="project in exp.projects">
+						<table>
+
+							<tr>
+								<td style="vertical-align : top; width : 70px">
+									<small>{{ project.from }} - {{ project.to }}</small>
+								</td>
+								<td style="vertical-align : top;"> &middot; </td>
+								<td style="vertical-align : top">
+
+									<div><strong>{{ project.label }}</strong></div>
+									<div><p class="text-info">{{ project.rol }}</p></div>
+									<div><small>{{ project.description }}</small></div>
+
+									<div style="margin-top : 5px;"><small><em>Tasks:</em></small></div>
+									<ul ng-repeat="task in project.tasks">
+										<li><small>{{ task }}</small></li>
+									</ul>
+
+									<div style="margin-top : 5px;"><small><em>Technologies:</em></small></div>
+									<small>
+									<span ng-repeat="tech in project.technologies">{{ tech }}, </span>
+								</td>
+							</tr>
+						</table>
+						<br>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+
+		<footer>
+			<p class="pull-right">2013</p>
+		</footer>
+
+	</div> <!-- /container -->
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-typeahead.js"></script>	
+</body>
+</html>
