@@ -177,12 +177,13 @@
 				<h4 style="border-bottom: solid 1px;"><span><i class="icon-global"></i> Social </span></h4>
 				<br>
 				<table style="margin:10px">
-					<tr  >
-						<td ng-repeat="net in cv.social">
+					<tr ng-repeat="net in cv.social">
+						<td >
 							<a href="{{ net.link }}" >
 								<image src="{{ net.icon }}"/>
 							</a>
 						</td>
+						<td><small>{{net.link}}</small></td>
 					</tr>
 				</table>
 

@@ -73,7 +73,7 @@ var cv = {
 		},
 		{ 
 			'label' : 'Linked In',
-			'link'  : 'http://es.linkedin.com/pub/ernesto-rold%C3%A1n-garc%C3%ADa/31/177/483',
+			'link'  : 'es.linkedin.com/pub/ernesto-roldán-garcía/31/177/483/',
 			'icon'	: 'http://leongaban.com/images/linkedin.png',
 		},
 		{ 
