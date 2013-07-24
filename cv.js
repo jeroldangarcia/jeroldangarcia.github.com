@@ -7,17 +7,17 @@ var cv = {
 
 	'profile' : {
 
-		'description' : 'More than a decade of experience designing, implementing and adapting online web applications, web portals and software development tools. Proficient in arquitecture and domain design, object oriented modeling, TDD / BDD, and more...',
+		'description' : 'IT professional highly motivated with more than a decade of experience designing, implementing and adapting online web applications, web portals and software development tools. Proficient in arquitecture and domain design, object oriented modeling, Design Patterns, TDD / BDD / DDD.',
 
 		'qualifications' : [
 
-			'Plan, develop and implement successful large projects from conception to completion',
+			'Open to **Agile Methodologies** for planning, develop and implement successful large projects',
 			
-			'Develop and implement web applications that support day-to-day operations',
+			'Experienced in manual and automated testing of applications',
 
-			'Collaboration and problem-solving skills',
+			'Good capacity for problem solving driving out complexity',
 
-			'Concerned about team satisfaction and productivity'
+			'Good team player, concerned about team satisfaction and productivity'
 		]
 	},
 
@@ -46,20 +46,41 @@ var cv = {
 
 	'skills' : [
 
-			{ 'label' : 'SCRUM', 	'value' : 75 },
+			{ 'label' : 'Agile SCRUM', 	'value' : 75 },
 			{ 'label' : 'XP', 		'value' : 65 },
+			{ 'label' : 'TDD',		'value' : 80 },
+			{ 'label' : 'BDD',		'value' : 80 },
+			{ 'label' : 'DDD',		'value' : 75 },
+			{ 'label' : 'CQRS',		'value' : 70 },
 
 			{ 'label' : 'Java', 	'value' : 90 },
-			{ 'label' : 'JS', 		'value' : 65 },
-			{ 'label' : 'Groovy', 	'value' : 40 },
+			{ 'label' : 'JS', 		'value' : 70 },
 
 			{ 'label' : 'HTML5', 	'value' : 85 },
 			{ 'label' : 'REST', 	'value' : 85 },
-			{ 'label' : 'JEE', 		'value' : 85 },
+			{ 'label' : 'JEE', 		'value' : 75 },
 			{ 'label' : 'Spring', 	'value' : 80 },
 			{ 'label' : 'NodeJS', 	'value' : 65 },
 			{ 'label' : 'NOSQL', 	'value' : 55 }
 
+	],
+
+	'social' : [ 
+		{ 
+			'label' : 'twitter',
+			'link'  : 'http://twitter.com/juergas',
+			'icon'	: 'http://leongaban.com/images/twitter.png',
+		},
+		{ 
+			'label' : 'Linked In',
+			'link'  : 'http://es.linkedin.com/pub/ernesto-rold%C3%A1n-garc%C3%ADa/31/177/483',
+			'icon'	: 'http://leongaban.com/images/linkedin.png',
+		},
+		{ 
+			'label' : 'github',
+			'link'  : 'https://github.com/jeroldangarcia',
+			'icon'	: 'http://jeremie.astori.fr/img/github_icon.png',
+		}
 	],
 
 	'experience' : [
@@ -71,18 +92,36 @@ var cv = {
 			'projects' : [
 
 				{
+					'label' : 'Internal Technical Office',
+					'relevance' : 'A',
+					'from' : '2012',
+					'to' : 'today',
+					'rol' : 'Software Consultant',
+					'description' : 'Consultory, Auditory and support to internal projects',
+					'tasks' : [
+						'Presales and technical support',
+						'Development Team Leadership',
+						'Training tasks'
+					],
+					'references' : {},
+					'methodologies' : 'Agile SCRUM',
+					'technologies' : [ 'JIRA', 'GIT']
+				},
+
+				{
 					'label' : 'MAPFRE Users Directory',
 					'relevance' : 'A',
 					'from' : '2012',
-					'to' : '2013',
+					'to' : '2012',
 					'rol' : 'Software Arquitect',
-					'description' : 'SCRUM methodology demostration project for MAPFRE.',
+					'description' : 'Agile SCRUM methodology demostration project for MAPFRE.',
 					'tasks' : [
+						'entusiast Agile Team developer',
 						'Business Web Services development',
 						'LDAP Integreation via Spring LDAP'
 					],
 					'references' : {},
-					'methodologies' : 'SCRUM',
+					'methodologies' : 'Agile SCRUM',
 					'technologies' : [
 						'Java JEE (JSF, WS)',
 						'Spring 3.1 (Spring-LDAP)'
@@ -98,7 +137,7 @@ var cv = {
 					'description' : 'Design and development of public RTVE site exposing multimedia contents on demand. Team worked under SCRUM methodology.',
 					'tasks' : [
 						'WebPortal Development platform from scratch',
-						'Legacy CMS data migration to custom business model',
+						'Legacy CMS data migration to DDD business model',
 						'REST Content API design',
 						'Customer activity social network (POC)'
 					],
@@ -106,7 +145,7 @@ var cv = {
 						'site' 	: 'www.rtve.es/alacarta',
 						'api' 	: 'rtve.es/api'
 					},
-					'methodologies' : 'SCRUM',
+					'methodologies' : 'SCRUM, Continuous Integration',
 					'technologies' : [
 						'Java JEE (Jsp/Servlet, JMS)',
 						'Spring 3.1 (SpringData, Spring MVC, ...)',

@@ -173,7 +173,20 @@
 					</tr>
 				</table>
 
-			</div>
+				<br>
+				<h4 style="border-bottom: solid 1px;"><span><i class="icon-global"></i> Social </span></h4>
+				<br>
+				<table style="margin:10px">
+					<tr  >
+						<td ng-repeat="net in cv.social">
+							<a href="{{ net.link }}" >
+								<image src="{{ net.icon }}"/>
+							</a>
+						</td>
+					</tr>
+				</table>
+
+			</div> <!-- end of column -->
 
 			<div class="span6">
 
@@ -212,9 +225,18 @@
 										<li><small>{{ task }}</small></li>
 									</ul>
 
-									<div style="margin-top : 5px;"><small><em>Technologies:</em></small></div>
-									<small>
-									<span ng-repeat="tech in project.technologies">{{ tech }}, </span>
+									<div style="margin-top : 5px;">
+										<small><em>Methodologies: </em></small>
+										<small> {{ project.methodologies }}</small>
+									</div>
+
+									<div style="margin-top : 5px;">
+										<small><em>Technologies:</em></small>
+										<small>
+											<span ng-repeat="tech in project.technologies">{{ tech }},</span>
+										</small>
+									</div>
+
 								</td>
 							</tr>
 						</table>
