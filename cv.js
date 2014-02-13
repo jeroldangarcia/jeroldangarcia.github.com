@@ -139,7 +139,7 @@ var cv = {
 						'WebPortal Development platform from scratch',
 						'Legacy CMS data migration to DDD business model',
 						'REST Content API design',
-						'Customer activity social network (POC)'
+						'Customer activity social network (CQRS and NOSQL technologies POC)'
 					],
 					'references' : {
 						'site' 	: 'www.rtve.es/alacarta',
