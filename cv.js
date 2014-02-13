@@ -109,6 +109,21 @@ var cv = {
 				},
 
 				{
+					'label' : 'MAPFRE application ALM monitor',
+					'relevance' : 'A',
+					'from' : '2012 June',
+					'to' : '2012 October',
+					'rol' : 'Software Arquitect and Developer',
+					'description' : 'Application state monitoring in a CI environment',
+					'tasks' : [
+						'App lide cycle DDD modelling'
+					],
+					'references' : {},
+					'methodologies' : 'AGILE DDD CQRS',
+					'technologies' : [ 'Axon Framework', 'Spring Test', 'MongoDB']
+				},
+
+				{
 					'label' : 'MAPFRE Users Directory',
 					'relevance' : 'A',
 					'from' : '2012',
@@ -134,11 +149,11 @@ var cv = {
 					'from' : '2010',
 					'to' : '2012',
 					'rol' : 'Software Arquitect and Development Technical Leader',
-					'description' : 'Design and development of public RTVE site exposing multimedia contents on demand. Team worked under SCRUM methodology.',
+					'description' : 'Platform arquitecture definition, CI environment implementation, design and development of public RTVE site exposing multimedia contents on demand. Team worked under SCRUM methodology.',
 					'tasks' : [
 						'WebPortal Development platform from scratch',
-						'Legacy CMS data migration to DDD business model',
-						'REST Content API design',
+						'Legacy CMS abstract data migration to DDD business model. (Entities, Repositories, Bounded Contexts, Anticorruption Layer, etc...)',
+						'REST Content API design exposing domain resources',
 						'Customer activity social network (CQRS and NOSQL technologies POC)'
 					],
 					'references' : {
@@ -148,7 +163,7 @@ var cv = {
 					'methodologies' : 'SCRUM, Continuous Integration',
 					'technologies' : [
 						'Java JEE (Jsp/Servlet, JMS)',
-						'Spring 3.1 (SpringData, Spring MVC, ...)',
+						'Spring 3.1 (SpringData, Spring MVC, Spring Test...)',
 						'Hibernate - Oracle',
 						'HTML5/Javascript',
 						'nodeJS',
