@@ -116,7 +116,7 @@ var cv = {
 					'rol' : 'Software Arquitect and Developer',
 					'description' : 'Application state monitoring in a CI environment',
 					'tasks' : [
-						'App lide cycle DDD modelling'
+						'App life cycle DDD modelling'
 					],
 					'references' : {},
 					'methodologies' : 'AGILE DDD CQRS',
