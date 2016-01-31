@@ -74,12 +74,11 @@
 
 		<div class="page-header">
 			<div class="row">
-				<div class="span6">
-					<small>Professional Resume</small>	
-					<h2 style="margin-top : 0px; margin-bottom: 0px;">{{cv.name}}</h2>
-					<h2 style="margin-top : 0px; margin-bottom: 0px;"><small style="font-size: 28px">{{ cv.title }}</small></h2>
+				<div class="span4">
+					<h2 style="margin-top : 0px; margin-bottom: 0px;"><div style="font-size: 25px">{{cv.name}}</div></h2>
+					<h2 style="margin-top : 0px; margin-bottom: 0px;"><small style="font-size: 25px">{{ cv.title }}</small></h2>
 				</div>
-
+				<div class="span2"></div>
 				<div class="span2">
 					<br><br>
 					<div>
@@ -118,46 +117,58 @@
 
 		<div class="row">
 
-			<div class="span6">
+			<div class="span4">
 
-				<h4 style="border-bottom: solid 1px;"><span><i class="icon-pencil"></i> Education</span></h4>
+				<h4 style="border-bottom: solid 1px;"><span><i class="icon-folder-open"></i> Profile </span></h4>
+
+				<br>
+				
 				<table>
 					<tr>
-						<td colspan="3">
+						<td rowspan="2" width="20px" valign="top"><span><i class="icon-book"></i></span></td>
+						<td>
 							<div><strong>{{ cv.education.title }}</strong></div>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<small>{{  cv.education.time }}</small>
-						</td>
-						<td> </td>
-						<td>
-							<div><small>{{ cv.education.school }}</small></div>
-						</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td>
-							<div><small>** {{ cv.education.note }}</small></div>
+							<small>{{  cv.education.time }}</small>&nbsp;-&nbsp;<small>{{ cv.education.school }}</small>
 						</td>
 					</tr>
 				</table>
 
-				<br><br>
-				<h4 style="border-bottom: solid 1px;"><span><i class="icon-folder-open"></i> Professional Profile</span></h4>
-				<small> {{ cv.profile.description }}</small>
+				<br>
 
-				<br><br><br>
-				<h4 style="border-bottom: solid 1px;"><span><i class="icon-list"></i> Qualifications </span></h4>
-				<ul ng-repeat="qualification in cv.profile.qualifications">
-					<li>
-						<div>
-							<small>{{ qualification }} </small>
-						</div>
-					</li>
-				</ul>
+				<table>
+					<tr>
+						<td rowspan="2" width="20px" valign="top"><span><i class="icon-user"></i></span></td>
+						<td>
+							<small> {{ cv.profile.description }}</small>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<small> {{ cv.profile.description2 }}</small>
+						</td>
+					</tr>
+				</table>
+
+				<br>
+
+				<table>
+					<tr>
+						<td width="20px" valign="top"><span><i class="icon-list"></i></span></td>
+						<td>
+							<ul ng-repeat="qualification in cv.profile.qualifications" style="list-style-type: none; padding:0; margin-left:0px;">
+								<li>
+									<div>
+										<small>{{ qualification }} </small>
+									</div>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
 
 				<br>
 				<h4 style="border-bottom: solid 1px;"><span><i class="icon-signal"></i> Skills </span></h4>
@@ -166,7 +177,7 @@
 					<tr>
 						<td style="width:80px">{{ skill.label }}</td>
 						<td>
-							<progress max="100" value="{{ skill.value }}" style="width:300px">
+							<progress max="100" value="{{ skill.value }}" style="width:200px">
   								<strong></strong>
 							</progress>
 						</td>
@@ -180,38 +191,36 @@
 					<tr ng-repeat="net in cv.social">
 						<td >
 							<a href="{{ net.link }}" >
-								<image src="{{ net.icon }}"/>
+								<image src="{{ net.icon }}" width="30px"/>
 							</a>
 						</td>
-						<td><small>{{net.link}}</small></td>
 					</tr>
 				</table>
 
 			</div> <!-- end of column -->
 
-			<div class="span6">
+			<div class="span8">
 
 				<h4 style="border-bottom: solid 1px;"><span><i class="icon-road"></i> Experience</span> <small>( Relevant projects )</small></h4>
 				<ul ng-repeat="exp in cv.experience" style="list-style-type:none; margin : 0 0 10px 0px">
+
 					<li>
+
+
 						<table>
 							<tr>
-								<td style="vertical-align : top; width : 70px">
-									<small>{{ exp.from }} - {{ exp.to }}</small>
-								</td>
-								<td style="vertical-align : top"> &middot;</td>
 								<td style="vertical-align : top">
-									<div><strong> {{ exp.company }}</strong></div>
-									<div><p class="text-info">{{ exp.rol }}</p></div>
+									<h4><strong>{{ exp.rol }} for {{ exp.company }}</strong></h4>
 								</td>
 							</tr>
 						</table>
 					</li>
+
 					<li ng-repeat="project in exp.projects">
 						<table>
 
 							<tr>
-								<td style="vertical-align : top; width : 70px">
+								<td style="vertical-align : top; width : 100px">
 									<small>{{ project.from }} - {{ project.to }}</small>
 								</td>
 								<td style="vertical-align : top;"> &middot; </td>

@@ -7,8 +7,8 @@ var cv = {
 
 	'profile' : {
 
-		'description' : 'IT professional highly motivated with more than a decade of experience designing, implementing and adapting online web applications, web portals and software development tools. Proficient in arquitecture and domain design, object oriented modeling, Design Patterns, TDD / BDD / DDD.',
-
+		'description' : 'IT professional highly motivated with more than a decade of experience designing, implementing and adapting online web applications, web portals and software development tools.',
+		'description2' : 'Proficient in arquitecture and domain design, object oriented modeling, Design Patterns, TDD / BDD / DDD.',
 		'qualifications' : [
 
 			'Open to **Agile Methodologies** for planning, develop and implement successful large projects',
@@ -40,41 +40,28 @@ var cv = {
 	'education' : {
 		'school'	: 'University Carlos III Madrid',
 		'title' 	: 'Technical Engineer in Computer Management',
-		'time'		: '1996 - 2000',
-		'note'		: 'absence of Degree Project' 
+		'time'		: '1996 - 2000'
 	},
 
 	'skills' : [
-
-			{ 'label' : 'Agile SCRUM', 	'value' : 75 },
-			{ 'label' : 'XP', 		'value' : 65 },
-			{ 'label' : 'TDD',		'value' : 80 },
-			{ 'label' : 'BDD',		'value' : 80 },
-			{ 'label' : 'DDD',		'value' : 75 },
-			{ 'label' : 'CQRS',		'value' : 70 },
-
-			{ 'label' : 'Java', 	'value' : 90 },
-			{ 'label' : 'JS', 		'value' : 70 },
-
-			{ 'label' : 'HTML5', 	'value' : 85 },
-			{ 'label' : 'REST', 	'value' : 85 },
-			{ 'label' : 'JEE', 		'value' : 75 },
-			{ 'label' : 'Spring', 	'value' : 80 },
-			{ 'label' : 'NodeJS', 	'value' : 65 },
-			{ 'label' : 'NOSQL', 	'value' : 55 }
-
+			{ 'label' : 'Agile SCRUM', 	 'value' : 80 },  
+			{ 'label' : 'HTML5', 	     'value' : 80 },
+			{ 'label' : 'JS', 		     'value' : 80 },
+			{ 'label' : 'Polymer',       'value' : 90 },
+			{ 'label' : 'Angular',       'value' : 70 },
+			{ 'label' : 'Spring', 	     'value' : 70 },
+			{ 'label' : 'NodeJS', 	     'value' : 70 },			
+			{ 'label' : 'Java-JEE',      'value' : 90 },
+			{ 'label' : 'REST', 	     'value' : 90 },
+			{ 'label' : 'TDD - BDD',     'value' : 90 },
+			{ 'label' : 'DDD-CQRS',		 'value' : 90 }
 	],
 
 	'social' : [ 
 		{ 
-			'label' : 'twitter',
-			'link'  : 'http://twitter.com/juergas',
-			'icon'	: 'http://leongaban.com/images/twitter.png',
-		},
-		{ 
 			'label' : 'Linked In',
-			'link'  : 'es.linkedin.com/pub/ernesto-roldán-garcía/31/177/483/',
-			'icon'	: 'http://leongaban.com/images/linkedin.png',
+			'link'  : 'https://es.linkedin.com/in/ernesto-roldán-garcía-48317731',
+			'icon'	: 'http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/simple-black-square-icons-social-media-logos/127717-simple-black-square-icon-social-media-logos-linkedin-logo.png',
 		},
 		{ 
 			'label' : 'github',
@@ -91,22 +78,62 @@ var cv = {
 			'rol' : 'Enterprise Web Solution Arquitect and IT Consultan',
 			'projects' : [
 
-				{
-					'label' : 'Internal Technical Office',
-					'relevance' : 'A',
-					'from' : '2012',
-					'to' : 'today',
-					'rol' : 'Software Consultant',
-					'description' : 'Consultory, Auditory and support to internal projects',
-					'tasks' : [
-						'Presales and technical support',
-						'Development Team Leadership',
-						'Training tasks'
-					],
-					'references' : {},
-					'methodologies' : 'Agile SCRUM',
-					'technologies' : [ 'JIRA', 'GIT']
-				},
+                {
+                    'label' : 'ECI DVD',
+                    'relevance': 'A',
+                    'from' : '2015 May',
+                    'to' : 'today',
+                    'rol' : 'Testing & QA',
+                    'description' : 'New supermarket site',
+                    'tasks' : [
+                        'BDD Evangelist',
+                        'CucumberJS implantation',
+                        'REST API design',
+                        'DB governance tool'
+                    ],
+                    'references':{},
+                    'methodologies':'Agile SCRUM',
+                    'technologies' : [
+                        'docker',
+                        'nodeJS',
+                        'CucumberJS',
+                        'Mocha / sinon / chai',
+                        'GO'
+                    ]
+                },
+
+                {
+                    'label' : 'QUVE',
+                    'relevance' : 'A',
+                    'from' : '2014 September',
+                    'to' : '2015 April',
+                    'rol' : 'Front End Developer',
+                    'description' : 'Web console for applications deployment',
+                    'tasks' : [
+                        'WebComponents design and development'
+                    ],
+                    'references': {},
+                    'methodologies' : 'Agile SCRUM',
+                    'technologies' : ['WebComponents', 'Polymer', 'Angular', 'HTML/Javascript']
+                },
+
+                {
+                    'label' : 'Internal Technical Office',
+                    'relevance' : 'A',
+                    'from' : '2012',
+                    'to' : '2014 August',
+                    'rol' : 'Software Consultant',
+                    'description' : 'Consultory, Auditory and support to internal projects',
+                    'tasks' : [
+                        'Presales and technical support',
+                        'Development Team Leadership',
+                        'Training tasks'
+                    ],
+                    'references' : {},
+                    'methodologies' : 'Agile SCRUM',
+                    'technologies' : [ 'JIRA', 'GIT']
+                },
+
 
 				{
 					'label' : 'MAPFRE application ALM monitor',
