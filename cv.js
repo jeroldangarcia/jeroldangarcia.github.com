@@ -1,7 +1,7 @@
 
 var cv = {
 
-	'name' : 'Ernesto Roldán García',
+	'name' : 'Ernesto Roldán',
 	
 	'title' : 'Software Engineer',
 
