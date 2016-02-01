@@ -25,8 +25,8 @@ var cv = {
 		'born' 		: '12 Jul. 1975',
 		'country'	: 'Spain',
 		'address' 	: {
-			'street' 	: 'Limonita 3',
-			'CP' 		: '28021',
+			'street' 	: '',
+			'CP' 		: '',
 			'city' 		: 'Madrid',
 			'country' 	: 'Spain'
 		},
