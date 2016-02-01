@@ -66,7 +66,7 @@ var cv = {
 		{ 
 			'label' : 'github',
 			'link'  : 'https://github.com/jeroldangarcia',
-			'icon'	: 'http://jeremie.astori.fr/img/github_icon.png',
+			'icon'	: 'http://qualityshepherd.com/images/icons/github.png'
 		}
 	],
 
