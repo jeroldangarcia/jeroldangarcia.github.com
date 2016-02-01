@@ -239,7 +239,28 @@ var cv = {
 						'IBM WAS 6',
 						'IBM Websphere Portal Server 5'
 					]
-				}
+				},
+				{
+					'label' : 'SEA',
+					'relevance' : 'A',
+					'from' : '2004',
+					'to' : '2005',
+					'rol' :  'Java Programmer',
+					'description' : 'Web application development suite, composed by a Struts/Portal enhanced execution engine, and an eclipse web-flow visual editor',
+					'tasks' : [
+						'eclipse plugin development',
+						'SEA customers solutions consultant'
+					],
+					'references' : {
+						'site' 	: 'http://atsistemas.com/ca/casos-de-exito/2005/10/mutua-madrilena-implantacion-de-sea-struts-extended-architecture/'
+					},
+					'methodologies' : '',
+					'technologies' : [
+						'Java J2EE',
+						'IBM WAS 6',
+						'IBM Websphere Portal Server 5'
+					]
+				}				
 			]
 		}
 	]
